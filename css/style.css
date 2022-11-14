@@ -94,30 +94,38 @@ h1 {
 
 }
 
-.tekst {
-  position: absolute;
-  bottom: 15px;
-}
-
-.overlay{
+.overlay {
   position: absolute;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
   background-color: rgba(248, 247, 243, 0.4);
+  transform: translateY(-100%);
 }
 
-.card:hover .overlay{
+.tekst {
+  position: absolute;
+  bottom: 15px;
+}
+
+.card:hover .overlay {
   cursor: pointer;
   transition: transform 0.2s linear;
   transform: translateY(0);
- 
+
 }
 
-.tekst h3:after{
+.tekst h3::after {
   content: "";
-  border-bottom: #303030 solid 1px;
+  display: block;
+  margin: 0 auto;
+  border-bottom: #303030 solid 2px;
+  width: 0;
+  transition: width 0.1s linear;
+}
+.card:hover h3::after{
+  width: 80%;
 }
 
 
